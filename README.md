@@ -4,4 +4,5 @@
 
 ## Useful Elements
 
-- [ ]
+- [ ] Server
+- [ ] Work with DB
