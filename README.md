@@ -2,7 +2,12 @@
 
 > Go
 
+> Gin
+
 ## Useful Elements
 
 - [ ] Server
-- [ ] Work with DB
+- [ ] DB init
+- [ ] CRUD operations
+- [ ] Auth
+- [ ] Hash password
