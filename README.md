@@ -11,3 +11,5 @@
 - [ ] CRUD operations
 - [ ] Auth
 - [ ] Hash password
+- [ ] JWT & Token protection
+- [ ] Middleware
