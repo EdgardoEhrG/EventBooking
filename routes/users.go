@@ -60,7 +60,7 @@ func getUsers(context *gin.Context) {
 	users, err := models.GetAllUsers()
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch users. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch users"})
 		return
 	}
 
@@ -78,7 +78,7 @@ func getUser(context *gin.Context) {
 	user, err := models.GetUserById(id)
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch user. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch user"})
 		return
 	}
 

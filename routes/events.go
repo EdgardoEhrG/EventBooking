@@ -12,7 +12,7 @@ func getEvents(context *gin.Context) {
 	events, err := models.GetAllEvents()
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch events. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch events"})
 		return
 	}
 
@@ -30,7 +30,7 @@ func getEvent(context *gin.Context) {
 	event, err := models.GetEventById(id)
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch event. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not fetch event"})
 		return
 	}
 
@@ -52,7 +52,7 @@ func createEvent(context *gin.Context) {
 	err = event.Save()
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not create event. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not create event"})
 		return
 	}
 
@@ -93,7 +93,7 @@ func updateEvent(context *gin.Context) {
 	err = updatedEvent.Update()
 
 	if err != nil {
-		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not update event. Try again later"})
+		context.JSON(http.StatusInternalServerError, gin.H{"message": "Could not update event"})
 		return
 	}
 
